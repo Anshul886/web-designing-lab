@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalogue Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main table container */
+        .catalogue-table {
+            width: 100%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Table borders and general cell padding */
+        .catalogue-table th, .catalogue-table td {
+            border: 1px solid #333333;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Top header: Logo cell styling */
+        .logo-header {
+            background-color: #ffcc99; /* Light orange color from design */
+            text-align: center !important;
+            vertical-align: middle;
+        }
+
+        /* Top header: Website title styling */
+        .website-name-header {
+            background-color: #ffcc99;
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        /* Clickable logo wrapper */
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Secondary header navigation row */
+        .nav-header {
+            background-color: #ffe6cc;
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Left sidebar departments */
+        .sidebar-cell {
+            font-weight: bold;
+            line-height: 2.5;
+        }
+
+        .sidebar-cell a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .sidebar-cell a:hover {
+            color: #007bff;
+        }
+
+        /* Thumbnail images for cover pages */
+        .book-cover {
+            width: 90px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.15);
+        }
+
+        /* Product meta text */
+        .book-details {
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        /* Price text alignment */
+        .price-cell {
+            font-weight: bold;
+            vertical-align: middle;
+            font-size: 16px;
+        }
+
+        /* Action item alignment */
+        .cart-cell {
+            vertical-align: middle;
+            text-align: center;
+        }
+
+        /* Functional cart call-to-action button */
+        .add-to-cart-btn {
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+            border: 1px solid #a88734;
+            border-radius: 4px;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+        }
+
+        .add-to-cart-btn:hover {
+            background: linear-gradient(to bottom, #f5d78e, #eeb933);
+        }
+    </style>
+</head>
+<body>
+
+    <table class="catalogue-table">
+        <thead>
+            <!-- Top Row: Functional Logo Link and Website Name Header -->
+            <tr>
+                <th class="logo-header">
+                    <!-- Replace href with your homepage link, and src with your actual logo image path -->
+                    <a href="homepge.html" class="logo-link" title="Return to Homepage">
+                        <img src="glbitm logo.jpg" alt="GL Bajaj Logo" class="logo-img">
+                    </a>
+                </th>
+                <th colspan="4" class="website-name-header">GLBITM Central Library</th>
+            </tr>
+            <!-- Secondary Row: Navigation Links Grid -->
+            <tr>
+                <th class="nav-header" style="width: 15%;">Home</th>
+                <th class="nav-header" style="width: 20%;">Login</th>
+                <th class="nav-header" style="width: 35%;">Registration</th>
+                <th class="nav-header" style="width: 15%;">Catalogue</th>
+                <th class="nav-header" style="width: 15%;">Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Row 1: XML Bible Book Entry -->
+            <tr>
+                <!-- Sidebar spanned down 4 rows to encompass all listed books -->
+                <td rowspan="4" class="sidebar-cell">
+                    <a href="#">CSE</a>
+                    <a href="#">ECE</a>
+                    <a href="#">EEE</a>
+                    <a href="#">CIVIL</a>
+                </td>
+                <td>
+                    <img src="https://placeholder.com" alt="XML Bible Cover" class="book-cover">
+                </td>
+                <td class="book-details">
+                    <strong>Book:</strong> XMLBible<br>
+                    <strong>Author:</strong> Winston<br>
+                    <strong>Publication:</strong> Wiely
+                </td>
+                <td class="price-cell">$40.5</td>
+                <td class="cart-cell">
+                    <button class="add-to-cart-btn">🛒 Add to cart</button>
+                </td>
+            </tr>
+
+            <!-- Row 2: Artificial Intelligence Book Entry -->
+            <tr>
+                <td>
+                    <img src="https://placeholder.com" alt="Artificial Intelligence Cover" class="book-cover">
+                </td>
+                <td class="book-details">
+                    <strong>Book:</strong> AI<br>
+                    <strong>Author:</strong> S.Russel<br>
+                    <strong>Publication:</strong> Princetonhall
+                </td>
+                <td class="price-cell">$63</td>
+                <td class="cart-cell">
+                    <button class="add-to-cart-btn">🛒 Add to cart</button>
+                </td>
+            </tr>
+
+            <!-- Row 3: Java 2 Book Entry -->
+            <tr>
+                <td>
+                    <img src="https://placeholder.com" alt="Java 2 Cover" class="book-cover">
+                </td>
+                <td class="book-details">
+                    <strong>Book:</strong> Java 2<br>
+                    <strong>Author:</strong> Watson<br>
+                    <strong>Publication:</strong> BPBPublications
+                </td>
+                <td class="price-cell">$35.5</td>
+                <td class="cart-cell">
+                    <button class="add-to-cart-btn">🛒 Add to cart</button>
+                </td>
+            </tr>
+
+            <!-- Row 4: HTML in 24 Hours Book Entry -->
+            <tr>
+                <td>
+                    <img src="https://placeholder.com" alt="HTML in 24 Hours Cover" class="book-cover">
+                </td>
+                <td class="book-details">
+                    <strong>Book:</strong> HTML in 24 hours<br>
+                    <strong>Author:</strong> Sam Peter<br>
+                    <strong>Publication:</strong> Sampublication
+                </td>
+                <td class="price-cell">$50</td>
+                <td class="cart-cell">
+                    <button class="add-to-cart-btn">🛒 Add to cart</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
