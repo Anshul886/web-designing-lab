@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Logo Link Styling */
+        .logo-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            transition: transform 0.2s ease;
+        }
+
+        .logo-link:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-img {
+            max-width: 120px;
+            height: auto;
+            display: block;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 25px;
+            font-size: 24px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .input-group input:focus {
+            border-color: #007bff;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .actions a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .actions a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <!-- Logo Link (Points to homepage or landing page) -->
+        <a href="https://glbitm.org/" title="Go to Homepage">
+            <!-- Replace the src with your actual logo image URL -->
+            <img src="glbitm logo.jpg" alt="GL Bajaj College Logo" class="logo-img">
+        </a>
+
+        <h2>Welcome Back</h2>
+
+        <form action="#" method="POST">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required placeholder="name@example.com">
+            </div>
+
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="••••••••">
+            </div>
+
+            <div class="actions">
+                <label>
+                    <input type="checkbox" name="remember"> Remember me
+                </label>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <p class="signup-link">Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+
+</body>
+</html>
