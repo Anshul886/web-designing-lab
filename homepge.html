@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        /* Header */
+        header {
+            background-color: #9460f5;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            padding: 20px 30px;
+            gap: 35px;
+            flex-wrap: wrap;
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: normal;
+            white-space: nowrap;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #551a8b;
+            font-size: 15px;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* Main content */
+        .main {
+            display: flex;
+            min-height: calc(100vh - 120px);
+        }
+
+        .sidebar {
+            width: 50px;
+            flex-shrink: 0;
+            background-color: #80bd68;
+        }
+
+        .content {
+            flex: 1;
+            text-align: center;
+            padding: 35px 15px;
+            background-color: #fff;
+        }
+
+        .content h3 {
+            color: #548754;
+            font-size: 18px;
+            margin-bottom: 18px;
+        }
+
+        .content p {
+            color: #6677cc;
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                gap: 20px;
+                padding: 20px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .sidebar {
+                width: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Online book Store</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="login.html">login</a>
+            <a href="registration.html">registration</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="cart.html">cart</a>
+        </nav>
+    </header>
+
+    <div class="main">
+
+        <aside class="sidebar"></aside>
+
+        <main class="content">
+            <h3>Online book Store Information</h3>
+
+            <p>
+                This is the book for the department
+                CSE, ECE, EEE, CIVIL, ME etc.
+            </p>
+        </main>
+
+    </div>
+
+</body>
+</html>
