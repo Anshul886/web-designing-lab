@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main table structural container */
+        .main-table {
+            width: 100%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Cell outline structure and global item padding */
+        .main-table th, .main-table td {
+            border: 1px solid #333333;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Top row: Logo cell alignment */
+        .logo-header {
+            text-align: center !important;
+            vertical-align: middle;
+            background-color: #ffcc99; /* Matches catalogue layout */
+        }
+
+        /* Top row: Website name header block */
+        .website-name-header {
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 20px;
+            vertical-align: middle;
+            background-color: #ffcc99;
+        }
+
+        /* Navigation wrapper link configuration */
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Nav row column alignments */
+        .nav-header {
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 16px;
+            background-color: #ffe6cc;
+        }
+
+        /* Left margin category listings */
+        .sidebar-cell {
+            font-weight: bold;
+            line-height: 2.5;
+            width: 15%;
+        }
+
+        .sidebar-cell a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .sidebar-cell a:hover {
+            color: #007bff;
+        }
+
+        /* --- Form Component Layout Styles --- */
+        .form-container {
+            padding: 10px 20px;
+        }
+
+        .form-title {
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #333;
+            border-bottom: 2px solid #ffcc99;
+            padding-bottom: 5px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        /* Text, Password, Email, and Phone inputs styling */
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        /* Inline group container for radio buttons and checkboxes */
+        .inline-group {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin-top: 4px;
+        }
+
+        .inline-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Select box row styling for Date of Birth */
+        .dob-select-group {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+        }
+
+        .dob-select-group select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #999;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        /* Submit / Action Button Styling */
+        .submit-btn {
+            background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+            border: 1px solid #a88734;
+            border-radius: 4px;
+            padding: 10px 24px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            color: #111;
+            box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+            margin-top: 10px;
+            max-width: 150px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(to bottom, #f5d78e, #eeb933);
+        }
+    </style>
+</head>
+<body>
+
+    <table class="main-table">
+        <thead>
+            <!-- Header Level 1: Clickable Logo Frame (Assumes logo.png is in the same folder) & Website Title -->
+            <tr>
+                <th class="logo-header">
+                   <a href="homepge.html" class="logo-link" title="Return to Homepage">
+                        <img src="glbitm logo.jpg" alt="GL Bajaj Logo" class="logo-img">
+                    </a>
+                </th>
+                <th colspan="4" class="website-name-header">Registration</th>
+            </tr>
+            <!-- Header Level 2: Core Routing Navigation Elements -->
+            <tr>
+                <th class="nav-header">Home</th>
+                <th class="nav-header" style="width: 25%;">Login</th>
+                <th class="nav-header" style="width: 25%;">Registration</th>
+                <th class="nav-header" style="width: 20%;">Catalogue</th>
+                <th class="nav-header" style="width: 15%;">Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Vertical Departmental Category List (Sidebar) -->
+                <td class="sidebar-cell">
+                    <a href="#">CSE</a>
+                    <a href="#">ECE</a>
+                    <a href="#">EEE</a>
+                    <a href="#">CIVIL</a>
+                </td>
+                
+                <!-- Main Form Area Container Workspace -->
+                <td colspan="4" class="form-container">
+                    <h2 class="form-title">Registration Form</h2>
+                    
+                    <form action="#" method="POST">
+                        
+                        <!-- 1) Name (Text field) -->
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                        </div>
+
+                        <!-- 2) Password (password field) -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" required placeholder="Enter secure password">
+                        </div>
+
+                        <!-- 3) E-mailid (text field - implemented as email type for proper validation) -->
+                        <div class="form-group">
+                            <label for="email">E-mail id</label>
+                            <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                        </div>
+
+                        <!-- 4) Phone Number (text field - implemented as tel type for telephone structure) -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="Enter phone number">
+                        </div>
+
+                        <!-- 5) Sex (radio button) -->
+                        <div class="form-group">
+                            <label>Sex</label>
+                            <div class="inline-group">
+                                <label><input type="radio" name="sex" value="male" required> Male</label>
+                                <label><input type="radio" name="sex" value="female"> Female</label>
+                                <label><input type="radio" name="sex" value="other"> Other</label>
+                            </div>
+                        </div>
+
+                        <!-- 6) Date of birth (3 select boxes) -->
+                        <div class="form-group">
+                            <label>Date of Birth</label>
+                            <div class="dob-select-group">
+                                <!-- Day Select Box -->
+                                <select name="dob-day" required>
+                                    <option value="" disabled selected>Day</option>
+                                    <!-- Dynamic Loop helper values -->
+                                    <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+                                    <option value="4">4</option><option value="5">5</option><option value="6">6</option>
+                                    <!-- Add remaining days up to 31 if needed -->
+                                </select>
+                                
+                                <!-- Month Select Box -->
+                                <select name="dob-month" required>
+                                    <option value="" disabled selected>Month</option>
+                                    <option value="January">January</option>
+                                    <option value="February">February</option>
+                                    <option value="March">March</option>
