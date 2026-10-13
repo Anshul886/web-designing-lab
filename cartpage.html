@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Main table structural container */
+        .cart-table {
+            width: 100%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Cell outline structure and global item padding */
+        .cart-table th, .cart-table td {
+            border: 1px solid #333333;
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Top row: Logo cell alignment */
+        .logo-header {
+            text-align: center !important;
+            vertical-align: middle;
+        }
+
+        /* Top row: Website name header block */
+        .website-name-header {
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 20px;
+            vertical-align: middle;
+        }
+
+        /* Navigation wrapper link configuration */
+        .logo-link {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Nav row column alignments */
+        .nav-header {
+            text-align: center !important;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Left margin category listings */
+        .sidebar-cell {
+            font-weight: bold;
+            line-height: 2.5;
+        }
+
+        .sidebar-cell a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .sidebar-cell a:hover {
+            color: #007bff;
+        }
+
+        /* Sub-table row text structure */
+        .item-row td {
+            border: none;
+            padding: 8px 4px;
+        }
+
+        .item-header {
+            font-weight: bold;
+            border-bottom: 1px solid #666 !important;
+        }
+
+        .total-row {
+            font-weight: bold;
+            border-top: 1px solid #333 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="cart-table">
+        <thead>
+            <!-- Header Level 1: Clickable Logo Frame & Web Site Name -->
+            <tr>
+                <th class="logo-header" style="width: 15%;">
+                    <!-- Accesses your local logo file 'logo.png' natively -->
+                    <a href="homepge.html" class="logo-link" title="Return to Homepage">
+                        <img src="glbitm logo.jpg" alt="GL Bajaj Logo" class="logo-img">
+                    </a>
+                </th>
+                <th colspan="4" class="website-name-header">Shopping Cart</th>
+            </tr>
+            <!-- Header Level 2: Core Routing Navigation Elements -->
+            <tr>
+                <th class="nav-header">Home</th>
+                <th class="nav-header" style="width: 25%;">Login</th>
+                <th class="nav-header" style="width: 25%;">Registration</th>
+                <th class="nav-header" style="width: 20%;">Catalogue</th>
+                <th class="nav-header" style="width: 15%;">Cart</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- Vertical departmental category list spanned cleanly down across data zones -->
+                <td class="sidebar-cell">
+                    <a href="#">CSE</a>
+                    <a href="#">ECE</a>
+                    <a href="#">EEE</a>
+                    <a href="#">CIVIL</a>
+                </td>
+                
+                <!-- Nested sub-table layout mapping directly to the itemized structure from your image -->
+                <td colspan="4" style="padding: 0;">
+                    <table style="width: 100%; border-collapse: collapse; border: none;">
+                        <thead>
+                            <tr class="item-row">
+                                <td class="item-header" style="width: 35%;">Book name</td>
+                                <td class="item-header" style="width: 20%;">Price</td>
+                                <td class="item-header" style="width: 20%;">Quantity</td>
+                                <td class="item-header" style="width: 25%;">Amount</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Product Row 1 -->
+                            <tr class="item-row">
+                                <td>Java 2</td>
+                                <td>$35.5</td>
+                                <td>2</td>
+                                <td>$70</td>
+                            </tr>
+                            <!-- Product Row 2 -->
+                            <tr class="item-row">
+                                <td>XML bible</td>
+                                <td>$40.5</td>
+                                <td>1</td>
+                                <td>$40.5</td>
+                            </tr>
+                            <!-- Financial Calculation Summary Row -->
+                            <tr class="item-row total-row">
+                                <td>Total amount</td>
+                                <td colspan="2">-</td>
+                                <td>$130.5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
